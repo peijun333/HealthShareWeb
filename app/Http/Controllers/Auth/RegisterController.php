@@ -129,6 +129,8 @@ class RegisterController extends Controller
             }
         }
     }
+
+    private $email_token; 
     
     public function mainCheck(Request $request)
     {
@@ -139,9 +141,11 @@ class RegisterController extends Controller
             'birth_month' => 'required|numeric',
             'birth_day' => 'required|numeric',
             ]);
+            $test = new RegisterController();
+            $test->$email_token = $request->email_token;
             //データ保持用
-            $email_token = $request->email_token;
-            
+            //RegisterController::$email_token = $request->email_token;
+            $email_token = $request->email_token;     
             $user = new User();
             $user->name = $request->name;
             $user->name_pronunciation = $request->name_pronunciation;
@@ -153,15 +157,15 @@ class RegisterController extends Controller
 
         public function mainRegister(Request $request)
         {
-            $user = User::where('email_verify_token',$request->email_token)->first();
-            $user->status = 1; //config('const.USER_STATUS.REGISTER');
-            $user->name = $request->name;
-            $user->name_pronunciation = $request->name_pronunciation;
-            $user->birth_year = $request->birth_year;
-            $user->birth_month = $request->birth_month;
-            $user->birth_day = $request->birth_day;
-            $user->save();
-            
-            return view('auth.main.registered');
+            $test = new RegisterController();
+                $user = User::where('email_verify_token',$test->$email_token)->first();
+                $user->status = 1; //config('const.USER_STATUS.REGISTER');
+                $user->name = $request->name;
+                $user->name_pronunciation = $request->name_pronunciation;
+                $user->birth_year = $request->birth_year;
+                $user->birth_month = $request->birth_month;
+                $user->birth_day = $request->birth_day;
+                $user->save();
+                return view('auth.main.registered');
         }
 }
