@@ -15,14 +15,21 @@ class CalorieController extends Controller
     {
         //API検索をかける
         $foodName = $request->food;
+        $data = array();
         $url = 'http://24th.jp/test/api_cal.php?submit=on&name=';
         $xml = simplexml_load_file( $url . $foodName );
+        $number = $xml->results_returned;
 
-        $food = $xml->food->name;
-        //foreach($xml->food as $test){
-            //$aaa = $tes
-        //}
+        foreach($xml->food as $item){
+            $x = array();
+            $x['id'] = (string)$item->id;
+            $x['name'] = (string)$item->name;
+            $x['cal'] = (string)$item->cal;
+            $data[] = $x;
+        }
 
-        return view('calorie.index',compact('food'));
+        logger($data);
+
+        return view('calorie.index',compact('data'));
     }
 }
