@@ -50,7 +50,7 @@
                             </ul>
                             <ul class="navbar-nav mr-auto">
                                 <li class = "nav-item">
-                                    <a class = "nav-link" href = "#">カロリー計算</a>
+                                    <a class = "nav-link" href = "{{ route('calorie')}}">カロリー計算</a>
                                 </li>
                             </ul>
                             <ul class="navbar-nav mr-auto">
