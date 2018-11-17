@@ -45,7 +45,7 @@
                         @else
                             <ul class="navbar-nav mr-auto">
                                 <li class = "nav-item">
-                                    <a class = "nav-link" href = "#">カロリー記録</a>
+                                    <a class = "nav-link" href = "{{ route('record') }}">カロリー記録</a>
                                 </li>
                             </ul>
                             <ul class="navbar-nav mr-auto">

@@ -23,3 +23,5 @@ Route::post('register/main_register', 'Auth\RegisterController@mainRegister')->n
 //各アプリへの移動
 Route::get('/home/calorie', 'Calorie\CalorieController@calorie')->name('calorie');
 Route::post('','Calorie\CalorieController@calorieAPI')->name('calorie.api');
+//記録
+Route::get('/home/record', 'Record\RecordController@record')->name('record');
