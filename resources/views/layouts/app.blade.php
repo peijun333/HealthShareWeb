@@ -60,7 +60,7 @@
                             </ul>
                             <ul class="navbar-nav mr-auto">
                                 <li class = "nav-item">
-                                    <a class = "nav-link" href = "#">xxxx</a>
+                                    <a class = "nav-link" href = "{{ route('daily')}}">毎日の記録</a>
                                 </li>
                             </ul>
                             <ul class="navbar-nav">
