@@ -60,7 +60,7 @@
                             </ul>
                             <ul class="navbar-nav mr-auto">
                                 <li class = "nav-item">
-                                    <a class = "nav-link" href = "{{ route('daily')}}">毎日の記録</a>
+                                    <a class = "nav-link" href = "{{ route('daily')}}">血圧・体重・体脂肪率</a>
                                 </li>
                             </ul>
                             <ul class="navbar-nav">
