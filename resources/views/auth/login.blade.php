@@ -59,6 +59,10 @@
 
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('パスワードをお忘れですか？') }}
+                                </a><br>
+                                <a class="btn btn-link" href="{{ route('register') }}">
+                                    登録
+                                </a>
                                 </a>
                             </div>
                         </div>
