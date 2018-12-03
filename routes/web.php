@@ -12,7 +12,7 @@
 */
 
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 Route::post('register/pre_check', 'Auth\RegisterController@pre_check')->name('register.pre_check');
 
 //本会員登録入力
