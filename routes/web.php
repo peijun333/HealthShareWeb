@@ -21,11 +21,11 @@ Route::post('register/main_check', 'Auth\RegisterController@mainCheck')->name('r
 Route::post('register/main_register', 'Auth\RegisterController@mainRegister')->name('register.main.registered');
 
 //各アプリへの移動
-Route::get('/home/calorie', 'Calorie\CalorieController@calorie')->name('calorie');
+Route::get('/calorie', 'Calorie\CalorieController@calorie')->name('calorie');
 Route::post('','Calorie\CalorieController@calorieAPI')->name('calorie.api');
 //記録
-Route::get('/home/record', 'Record\RecordController@record')->name('record');
+Route::get('/record', 'Record\RecordController@record')->name('record');
 
 //血圧・体重・体脂肪率
-Route::get('/home/daily', 'Daily\DailyController@daily')->name('daily');
-Route::post('/home/daily', 'Daily\DailyController@insert')->name('insert');
+Route::get('/daily', 'Daily\DailyController@daily')->name('daily');
+Route::post('/daily', 'Daily\DailyController@insert')->name('insert');
