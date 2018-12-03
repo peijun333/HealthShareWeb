@@ -2,10 +2,10 @@
 Health magement application on the web.
 
 ### TODO
-- Calorie
-- Daily
-- Share
-- Graph
+- Calorie (record calorie)
+- Daily (record your health condition)
+- Share (share your record with your family)
+- Graph (show graph of the record)
 
 ## Framework
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
