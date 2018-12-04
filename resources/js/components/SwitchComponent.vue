@@ -2,8 +2,9 @@
   <v-app id="app">
     <v-navigation-drawer v-model="drawer" clipped fixed app >
       <v-list dense>
-        <r-link linkname='home'></r-link>
+        <r-link linkname='calorie'></r-link>
         <r-link linkname='record'></r-link>
+        <r-link linkname='daily'></r-link>
       </v-list>
     </v-navigation-drawer>
 
@@ -48,7 +49,7 @@
     data: () => ({
       drawer: false,
       footer: 'footer',
-      title: 'title',
+      title: 'Health Share',
     }),
 
     mounted() {

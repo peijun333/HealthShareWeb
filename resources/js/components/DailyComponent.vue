@@ -3,7 +3,7 @@
     <v-container fluid fill-height>
       <v-layout justify-center fluid>
         <v-flex xs12 offset-mx5>
-          Home Component.
+          this page is dailycomponent.
         </v-flex>
       </v-layout>
     </v-container>
